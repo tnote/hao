@@ -219,6 +219,15 @@ $(function () {
         };
       },
     },
+    yunpan: {
+      url: 'http://unionsug.baidu.com/su',
+      data: function (keyword) {
+        return {
+          wd: keyword,
+          cb: 'window.searchResultBaidu',
+        };
+      },
+    },
   };
   function getSearchResult(keyword) {
     var searchType = getSeachType();
