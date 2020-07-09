@@ -15,7 +15,7 @@ $(function () {
   var search_types = [
     { url: 'http://search.jd.com/Search?keyword=', type: 'jingdong' },
     { url: 'https://www.baidu.com/s?wd=', type: 'baidu' },
-    { url: 'https://www.sogou.com/web?query=', type: 'sogou' },
+    { url: 'https://weixin.sogou.com/weixin?type=2&query=', type: 'sogou' },
     { url: 'https://cn.bing.com/search?q=', type: 'bing' },
     { url: 'https://www.so.com/s?q=', type: 'so' },
     { url: 'https://www.google.com/search?q=', type: 'google' },
