@@ -7,7 +7,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-@font-face{font-family:"FZXiJinLJW";src:url(//cdn.jsdelivr.net/gh/eallion/favorite@master/static/fonts/FZXiJinLJW.ttf) format("truetype")}
+@font-face{font-family:"FZXiJinLJW";src:url(//cdn.jsdelivr.net/gh/tnote/hao@master/static/fonts/FZXiJinLJW.ttf) format("truetype")}
 body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
     margin: 0px;
     padding: 0px;
@@ -153,7 +153,10 @@ textarea {
     background-image: url("https://cdn.jsdelivr.net/gh/tnote/hao@master/static/css/img/scwangpan.png");
 }
 .search-logo.yunpan, li.yunpan {
-    background-image: url("https://cdn.jsdelivr.net/gh/tnote/hao@master/static/css/img/scwangpan.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/tnote/hao@master/static/css/img/yunpan.png");
+}
+.search-logo.jingdong, li.jingdong {
+    background-image: url("https://cdn.jsdelivr.net/gh/tnote/hao@master/static/css/img/jingdong.png");
 }
 .search-logo.so, li.so {
     background-image: url("https://cdn.jsdelivr.net/gh/tnote/hao@master/static/css/img/scso.png");
