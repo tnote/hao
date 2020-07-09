@@ -152,6 +152,9 @@ textarea {
 .search-logo.wangpan, li.wangpan {
     background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scwangpan.png");
 }
+.search-logo.yunpan, li.yunpan {
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scwangpan.png");
+}
 .search-logo.so, li.so {
     background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scso.png");
 }
