@@ -21,6 +21,7 @@ $(function () {
     { url: 'http://www.cilimao.cc/search?word=', type: 'cili' },
     { url: 'http://neets.cc/search?key=', type: 'yingyin' },
     { url: 'http://www.panduoduo.net/s/name/', type: 'wangpan' },
+    { url: 'https://www.yunpanjingling.com/search/', type: 'yunpan' },
   ];
   $searchLogo.on('click', function () {
     $searchMethods.show();
