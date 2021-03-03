@@ -49,9 +49,9 @@ textarea {
 .footer {
     height: 60px;
     text-align: center;
-    margin-top: -60px; 
+    margin-top: -60px;
     /* position: relative;
-    margin-top: -100px; 
+    margin-top: -100px;
     clear:both; */
 }
 .footer a, a:link, a:hover, a:visited, a:active {
@@ -81,7 +81,7 @@ textarea {
 /* logo end  */
 /* 搜索框 start */
 .search-section {
-    /* 
+    /*
     margin-top: 14px;
     margin-bottom: 40px;
     */
@@ -293,23 +293,24 @@ textarea {
     color:rgba(49, 70, 89, 1);
     font-size: 13px;
     text-align: left;
-    padding-left: 1.7em;
+    padding-left: 0.7em;
     line-height: 44px;
     transition: all 0.2s;
     border-radius: 2px;
 }
 .jj-list-con li a img{
     height: 13px;
-    margin-right: 8px;
+    margin-right: 5px;
+    padding-top: 3px;
 }
 .jj-list-con li a:hover {
     background: #1890FF 100%;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: #fff;
 }
 .jj-list-con li a:hover img{
-    height: 18px;
+    height: 16px;
     margin-right: 8px;
 }
 /* 导航栏样式 */
@@ -318,7 +319,7 @@ header {
     /* height: 50px; */
     position: fixed;          /* 绝对定位（根据游览器边框定位） */
     top: -60;
-    transition: top 0.5s;     /* 动画效果，top：显示的效果， 1s：是效果产生所花费的时间*/
+    transition: top 1.5s;     /* 动画效果，top：显示的效果， 1s：是效果产生所花费的时间*/
     display: none;
     text-align: center;
     z-index: 1;
@@ -360,16 +361,16 @@ header:focus {
 .header li a{
     display: block;
     color: #eee;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold  ;
     text-align: center;
-    line-height: 44px;
+    line-height: 30px;
     transition: all 0.2s;
 }
 .header li a:hover {
-    font-size: 18px;
+    font-size: 13px;
     font-weight: bold;
-    color: #fff;
+    color: #d2297a;
 }
 .eallion-nav{
     display: none;
@@ -472,7 +473,7 @@ header:focus {
         margin: 0px 14px;
     }
     .header li a {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 @media screen and (max-device-width: 1279px) {
