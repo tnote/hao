@@ -47,9 +47,9 @@ $(function () {
     var $keyword = $(this);
     var keyword = $keyword.val();
     if(event.which==13){
-    	if($('#search_result .active').length>0){
-    		keyword = $('#search_result .active').eq(0).text();
-    	}
+      if($('#search_result .active').length>0){
+        keyword = $('#search_result .active').eq(0).text();
+      }
       openSearch(keyword)
       return;
     }
@@ -57,7 +57,7 @@ $(function () {
     // TODO 上下键选择待选答案
     var bl = moveChange(event);
     if(bl){
-    	keywordChange(keyword);
+      keywordChange(keyword);
     }
   }).on('blur', function () {
     $('#search_result').hide();
@@ -66,43 +66,43 @@ $(function () {
     keywordChange(keyword);
   });
   function moveChange(e){
-		var k = e.keyCode || e.which;
-		var bl = true;
-		switch(k){
-			case 38:
-				rowMove('top');
-				bl = false;
-				break;
-			case 40:
-				rowMove('down');
-				bl = false;
-				break;
-		}
-		return bl;
-	}
+    var k = e.keyCode || e.which;
+    var bl = true;
+    switch(k){
+      case 38:
+        rowMove('top');
+        bl = false;
+        break;
+      case 40:
+        rowMove('down');
+        bl = false;
+        break;
+    }
+    return bl;
+  }
   function rowMove(move){
-  	var search_result = $('#search_result');
-  	var hove_li = null;
-  	search_result.find('.result-item').each(function(){
-  		if($(this).hasClass('active')){
-  			hove_li = $(this).index();
-  		}
-  	});
-  	if(move == 'top'){
-  		if(hove_li==null){
-	  		hove_li = search_result.find('.result-item').length-1;
-	  	}else{
-	  		hove_li--;
-	  	}
-  	}else if(move == 'down'){
-  		if(hove_li==null){
-	  		hove_li = 0;
-	  	}else{
-	  		hove_li==search_result.find('.result-item').length-1?(hove_li=0):(hove_li++);
-	  	}
-  	}
-  	search_result.find('.active').removeClass('active');
-  	search_result.find('.result-item').eq(hove_li).addClass('active');
+    var search_result = $('#search_result');
+    var hove_li = null;
+    search_result.find('.result-item').each(function(){
+      if($(this).hasClass('active')){
+        hove_li = $(this).index();
+      }
+    });
+    if(move == 'top'){
+      if(hove_li==null){
+        hove_li = search_result.find('.result-item').length-1;
+      }else{
+        hove_li--;
+      }
+    }else if(move == 'down'){
+      if(hove_li==null){
+        hove_li = 0;
+      }else{
+        hove_li==search_result.find('.result-item').length-1?(hove_li=0):(hove_li++);
+      }
+    }
+    search_result.find('.active').removeClass('active');
+    search_result.find('.result-item').eq(hove_li).addClass('active');
   }
   function keywordChange(keyword) {
     if (keyword === '') {
@@ -251,23 +251,17 @@ $(function () {
       window.open(baseUrl.url + keyword);
     }
   }
-$(function(){
-    var page_heig = $(document).scrollTop();            /* 初始化。用于第一次获取滚动条的高度 */
-    var navigation = $('.navigation').outerHeight();    /* 获取该元素的高度 */
-    $(window).scroll(function() {                       /* 滚动条触发事件 */
-        var real_heig = $(document).scrollTop();        /* 事件触发后获取滚动条高度 */
-        if (real_heig > navigation){                    /* 触发后的高度 与 元素的高度对比 */
-            $('.navigation').addClass('show_header');          /* True 添加隐藏属性 */
-        }else {
-            $('.navigation').removeClass('show_header');       /* False 删除隐藏属性 */
-        }
-        if (real_heig < page_heig){                     /* 触发后的高度 与 上次触发后的高度 */
-            $('.navigation').removeClass('show_header');       /* True 删除隐藏属性 */
-        }
-        page_heig = $(document).scrollTop();            /* 再次获取滚动条的高度，用于下次触发事件后的对比 */
-     });
+
+$(window).scroll(function() {
+    clearTimeout($.data(this, 'scrollTimer'));
+        $('header').show();
+
+    $.data(this, 'scrollTimer', setTimeout(function() {
+        // do something
+        $('header').hide();
+    }, 3000));
 });
-/*back to top */
+/*back to top
 $('.to-top').toTop({
   //options with default values
   autohide: true,
@@ -276,5 +270,15 @@ $('.to-top').toTop({
   position: true,
   right: 13,
   bottom: 31
+});*/
 });
+/*To use the  DOMNodeInserted event listening, jquery is required*/
+$(document).bind('DOMNodeInserted', function(event) {
+  $('a[href^="http"]').each(
+        function(){
+          if (!$(this).attr('target')) {
+              $(this).attr('target', '_blank')
+          }
+        }
+    );
 });
